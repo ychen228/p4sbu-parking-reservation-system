@@ -1,0 +1,4 @@
+{
+  "parking-lots_null": "Invalid ID format",
+  "parking-lots_67f5beb48bd61c7932d00d95": "{\"ID\":\"67f5beb48bd61c7932d00d95\",\"Name\":\"Lot 1\",\"Spaces\":676,\"Faculty\":138,\"Premium\":0,\"Metered\":0,\"Resident\":524,\"Ada\":14,\"Ev\":false,\"Active\":true,\"Location\":{\"lat\":40.91656639080932,\"lng\":-73.1169195914031},\"Node\":\"67f5beab8bd61c7932d00c9f\",\"Fee\":0,\"Occupancy\":0}"
+}

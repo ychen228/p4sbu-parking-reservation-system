@@ -1,0 +1,35 @@
+.auth-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .tab-navigation {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  
+  .tab-button.active {
+    background-color: white;
+    border-bottom: 2px solid rgb(248, 53, 53);
+    font-weight: bold;
+  }
+  

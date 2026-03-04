@@ -1,0 +1,23 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.map {
+  flex: 1;
+  width: 100%;
+}
+.google-map {
+  height: 100%;
+  width: 100%;
+}

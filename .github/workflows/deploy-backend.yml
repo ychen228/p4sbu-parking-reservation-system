@@ -1,0 +1,41 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Backend/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+          
+      - name: Build
+        run: |
+          cd Backend
+          go build -o p4sbu-backend
+
+      - name: Deploy to DigitalOcean
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.BACKEND_HOST }}
+          username: p4sbu
+          key: ${{ secrets.BACKEND_SSH_KEY }}
+          source: "Backend/p4sbu-backend,Backend/config/*"
+          target: "/var/www/p4sbu"
+          
+      - name: Restart Service
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.BACKEND_HOST }}
+          username: p4sbu
+          key: ${{ secrets.BACKEND_SSH_KEY }}
+          script: |
+            sudo systemctl restart p4sbu-backend.service

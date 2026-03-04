@@ -1,0 +1,54 @@
+#backend
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/vendor/
+/bin/
+/dist/
+go.work
+
+# Environment and credentials
+.env
+*.env
+*.pem
+*.key
+credentials.json
+*_credentials.*
+
+#frontend
+/frontend/node_modules
+/frontend/.pnp
+/frontend/.pnp.js
+/frontend/coverage
+/frontend/build
+/frontend/dist
+/frontend/.env*
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime*
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+logs/
+log/
+
+# OS specific
+.DS_Store
+Thumbs.db
+desktop.ini
